@@ -1,0 +1,103 @@
+/* GENERALES */
+
+body {
+    margin: 0;
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2%;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+
+        .logoNav {
+            border-radius: 50%;
+        }
+
+        .links {
+            list-style: none;
+            display: flex;
+
+            li, a {
+                margin: 0 10px;
+                color: #041b15;
+                font-size: larger;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    /* main {
+        margin: 0 15%;
+    } */
+
+    footer {
+        padding: 15px 0;
+        text-align: center;
+        background-color: #1b1f22;
+        color: #dde2de;
+        display: flex;
+        flex-direction: column;
+        .opciones {
+            display: flex;
+            justify-content: space-around;
+            .items {
+                text-align: start;
+            }
+        }
+    }
+}
+
+/* INDEX */
+
+.logoPrincipal{
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.cards {
+    margin: 0 15%;
+}
+
+
+/* PRODUCTOS */
+
+.productos {
+    display: flex;
+    max-height: 70vh;
+    overflow: auto;
+}
+
+/* EQUIPO */
+.equipo {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+/* SERVICIOS */
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    .pesaje, .asesoramiento {
+        display: flex;
+        align-items: center;
+        img {
+            border-radius: 50%;
+            max-width: 50%;
+        }
+        p {
+            text-align: center;
+            font-size: larger;
+            margin: 10px;
+        }
+    }
+}
+
+/* CONTACTO */
+
