@@ -106,6 +106,49 @@ body {
 
 .cards {
     margin: 0 15%;
+    padding: 10% 0;
+    display: flex;
+    justify-content: space-around;
+    .card1, .card2, .card3 {
+        width: 25%;
+        min-width: 150px;
+        height: 450px;
+        background-color: #dde2de;
+        border-radius: 6px;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: larger;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: medium;
+        }
+        &:hover {
+            transform: scale(1.1);
+            transition: all 0.5s ease;
+            background-color: #71c5c7;
+            p, h3 {
+                transition: all 0.3s ease;
+                color: #dde2de;
+            }
+        }
+    }
+    .card2 {
+        margin-top: 100px;
+    }
 }
 
 
