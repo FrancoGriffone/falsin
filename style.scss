@@ -1,0 +1,333 @@
+//GENERALES
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+p, label {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+//VARIABLES
+$blanco: #ffffff;
+$blancoClaro: #dde2de;
+$negro: #041b15;
+$negroClaro: #1b1f22;
+$celeste: #71c5c7;
+$boxShadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+
+body {
+    margin: 0;
+
+    header {
+        z-index: 1;
+        position: sticky;
+        top: 0;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-color: $blanco;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2%;
+        box-shadow: $boxShadow;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logoNav {
+            border-radius: 50%;
+        }
+
+        .links, .listaLinks {
+            list-style: none;
+            margin: 0;
+
+            li {
+                margin: 0 10px;
+                color: $negro;
+                text-decoration: none;
+                a {
+                    font-size: large;
+                    font-family: 'Poppins', sans-serif;
+                    color: $negro;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        color: $celeste;
+                        font-size: larger;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .linksMobile {
+            position: relative;
+            &:hover {
+                .titulo {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+                .listaLinks {
+                    display: flex;
+                }
+            }
+        }
+
+        .listaLinks {
+            display: none;
+            position: absolute;
+            right: 0px;
+            flex-direction: column;
+            align-items: center;
+            background: $blanco;
+            top: 50px;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: $boxShadow;
+        }
+    }
+
+    .productos, .contacto {
+        margin: 0 15%;
+    }
+
+    footer {
+        padding: 10px 15%;
+        text-align: center;
+        background-color: $negroClaro;
+        color: $blancoClaro;
+        display: flex;
+        flex-direction: column;
+        .newsletter {
+            padding: 10px 0;
+            display: flex;
+            border-bottom: 1px solid $blancoClaro;
+            p {
+                margin: 1rem 0
+            }
+        }
+        .opciones {
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 0;
+            border-bottom: 1px solid $blancoClaro;
+            .contenedor {
+                .subTitulo {
+                    margin: 1rem 0;
+                }
+                .items {
+                    text-align: start;
+                }
+            }
+        }
+        .derechos {
+            display: flex;
+            justify-content: flex-end;
+            p {
+                margin: 1rem 0;
+            }
+        }
+    }
+
+    /* MEDIA QUERYS */
+    /* HEADER Y FOOTER*/
+
+    @media(width < 550px){
+        & .links {
+            display: none;
+        }
+        & .linksMobile {
+            display: flex;
+        }
+        & .footer {
+            .newsletter {
+                justify-content: center;
+            }
+            .opciones {
+                flex-direction: column;
+            }
+        }
+    }
+
+    @media(width > 550px){
+        & .linksMobile {
+            display: none;
+        }
+        & .links {
+            display: flex;
+        }
+        & .footer {
+            .newsletter {
+                justify-content: flex-start;
+            }
+            .opciones {
+                .contenedor {
+                    margin-right: 50px;
+                }
+            }
+        }
+    }
+}
+
+/* INDEX */
+
+.cards {
+    margin: 0 15%;
+    padding: 10% 0;
+    display: flex;
+    justify-content: space-around;
+    /* MEDIA QUERYS */
+    @media(width < 925px){
+        flex-direction: column;
+    }
+    .card1, .card2, .card3 {
+        min-width: 150px;
+        height: 450px;
+        background-color: $blancoClaro;
+        border-radius: 6px;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: $boxShadow;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: larger;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: medium;
+        }
+        &:hover {
+            transform: scale(1.1);
+            transition: all 0.5s ease;
+            background-color: $celeste;
+            p, h3 {
+                transition: all 0.3s ease;
+                color: $blancoClaro;
+            }
+        }
+    }
+
+    @media(width > 925px){
+        .card1, .card2, .card3 {
+            width: 25%;
+        }
+        .card2 {
+            margin-top: 100px;
+        }
+    }
+}
+
+/* PRODUCTOS */
+
+.productos {
+    .titulo {
+        margin-top: 3%;
+        p {
+            font-size: xx-large;
+        }
+    }
+    .cardsProductos {
+        padding: 3% 0 5% 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        /* MEDIA QUERYS */
+        @media(width < 925px){
+            flex-direction: column;
+        }
+    }
+}
+
+/* EQUIPO */
+.equipo {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+/* SERVICIOS */
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    .pesaje, .asesoramiento {
+        display: flex;
+        align-items: center;
+        img {
+            border-radius: 50%;
+            max-width: 50%;
+        }
+        p {
+            text-align: center;
+            font-size: larger;
+            margin: 10px;
+        }
+    }
+}
+
+/* CONTACTO */
+
+.contacto {
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid $negroClaro;
+            font-size: medium;
+        }
+        // button {
+        //     padding: 10px 20px;
+        //     background-color: $celeste;
+        //     color: $blancoClaro;
+        //     border: none;
+        //     border-radius: 6px;
+        //     cursor: pointer;
+        //     &:hover {
+        //         background-color: darken($celeste, 10%);
+        //     }
+        // }
+    }
+    .faqs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10% 0;
+        .titulo {
+            h2 {
+                font-size: xx-large;
+            }
+        }
+        .faqItem {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h3 {
+                font-size: x-large;
+                font-style: italic;
+            }
+        }
+    }
+}
+

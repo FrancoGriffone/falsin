@@ -29,24 +29,81 @@
         </nav>
     </header>
 
-    <main>
-        <section class="tituloForm">
-            <h3>¡Entrá en contacto con nosotros!</h3>
+    <main class="contacto">
+        <section class="formulario">
+            <div class="tituloForm">
+                <h2>¡Entrá en contacto con nosotros!</h2>
+            </div>
+            <div class="formularioContacto">
+                <form action="#" method="post">
+                    <div class="grupo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="grupo">
+                        <div class="subGrupo">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                        <div class="subGrupo">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="grupo">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea> 
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+        <section class="faqs">
+            <div class="titulo">
+                <h2>Preguntas Frecuentes</h2>
+            </div>
+            <div class="faqItem">
+                <h3>⬇️ ¿Cómo puedo realizar un pedido?</h3>
+                <p>Para realizar un pedido, puedes contactarnos a través de nuestro formulario de contacto o llamarnos directamente. Estaremos encantados de ayudarte con tu solicitud.</p>
+            </div>
+            <div class="faqItem">
+                <h3>⬇️ ¿Qué métodos de pago aceptan?</h3>
+                <p>Aceptamos diversas formas de pago, incluyendo tarjetas de crédito, transferencias bancarias y pagos en efectivo al momento de la entrega.</p>
+            </div>
+            <div class="faqItem">
+                <h3>⬇️ ¿Hacen envíos a domicilio?</h3>
+                <p>Sí, realizamos envíos a domicilio en toda la región. Los tiempos de entrega varían según la ubicación, pero nos esforzamos por ser lo más rápidos posible.</p>
+            </div>
+            <div class="faqItem">
+                <h3>⬇️ ¿Tienen algún tipo de descuento por compras al por mayor?</h3>
+                <p>Sí, ofrecemos descuentos especiales para compras al por mayor. Por favor, contáctanos para más detalles sobre precios y condiciones.</p>
+            </div>
+        </section>
+        <!-- <section class="tituloForm">
+            <h2>¡Entrá en contacto con nosotros!</h2>
         </section>
         <section class="formularioContacto">
-            <form>
-                <div class="inputNombre">
-                    <input type="text">
+            <form action="#" method="post">
+                <div class="grupo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
                 </div>
-                <div class="inputEmail">
-                    <input type="text">
+                <div class="grupo">
+                    <div class="subGrupo">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="subGrupo">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
                 </div>
-                <div class="inputDetalle">
-                    <textarea></textarea>
+                <div class="grupo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea> 
                 </div>
-                <button></button>
-            </form>
-        </section>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+        </section> -->
     </main>
 
     <footer class="footer">
@@ -55,7 +112,7 @@
         </section>
         <section class="opciones">
             <div class="contenedor">
-                <p>AYUDA</p>
+                <p class="subTitulo">AYUDA</p>
                 <hr>
                 <div class="items">
                     <p>Preguntas frecuentes</p>
@@ -65,7 +122,7 @@
                 </div>
             </div>
             <div class="contenedor">
-                <p>SEGUINOS</p>
+                <p class="subTitulo">SEGUINOS</p>
                 <hr>
                 <div class="items">
                     <p>Instagram</p>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distribuidora FALSIN</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -31,12 +32,59 @@
 
     <main>
         <section class="productos">
-            <img src="assets/agua.png" alt="foto agua" width="100%">
-            <img src="assets/coca.png" alt="foto coca" width="100%">
-            <img src="assets/pepsi.png" alt="foto pepsi" width="100%">
-            <img src="assets/aguatonica.png" alt="foto agua tonica 1" width="100%">
-            <img src="assets/aguatonica2.png" alt="foto agua tonica 2" width="100%">
-            <img src="assets/soda.png" alt="foto soda" width="100%">
+            <div class="titulo">
+                <p>Nuestros productos</p>
+            </div>
+            <div class="cardsProductos">
+                <div class="card m-3" style="width: 40%; min-width: 250px">
+                    <img src="assets/agua.png" alt="foto agua" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Agua Mineral Natural</h5>
+                        <p class="card-text">Disfruta de la pureza y frescura de nuestra agua mineral, extraída de manantiales seleccionados. Ideal para acompañar tus comidas, hidratarte durante el día y cuidar tu salud con un producto de máxima calidad y sabor suave.</p>
+                        <a href="#" class="btn btn-primary">Ver más detalles</a>
+                    </div>
+                </div>
+                <div class="card m-3" style="width: 40%; min-width: 250px">
+                    <img src="assets/coca.png" alt="foto coca" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Coca-Cola Original</h5>
+                        <p class="card-text">La bebida refrescante más famosa del mundo, perfecta para compartir en cualquier ocasión. Su sabor inconfundible y burbujeante la convierte en la favorita de chicos y grandes, ideal para acompañar tus comidas y momentos especiales.</p>
+                        <a href="#" class="btn btn-primary">Ver más detalles</a>
+                    </div>
+                </div>
+                <div class="card m-3" style="width: 40%; min-width: 250px">
+                    <img src="assets/pepsi.png" alt="foto pepsi" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Pepsi</h5>
+                        <p class="card-text">Pepsi es la opción ideal para quienes buscan una alternativa refrescante y deliciosa. Su sabor único y equilibrado la hace perfecta para disfrutar en reuniones, fiestas o simplemente para acompañar tus comidas favoritas.</p>
+                        <a href="#" class="btn btn-primary">Ver más detalles</a>    
+                    </div>
+                </div>
+                <div class="card m-3" style="width: 40%; min-width: 250px">
+                    <img src="assets/aguatonica.png" alt="foto agua tonica 1" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Agua Tónica Clásica</h5>
+                        <p class="card-text">Nuestra agua tónica clásica es perfecta para preparar cócteles o disfrutar sola. Su sabor refrescante y ligeramente amargo la convierte en la compañera ideal para tus momentos de relax y celebración.</p>
+                        <a href="#" class="btn btn-primary">Ver más detalles</a>
+                    </div>
+                </div>
+                <div class="card m-3" style="width: 40%; min-width: 250px">
+                    <img src="assets/aguatonica2.png" alt="foto agua tonica 2" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Agua Tónica Premium</h5>
+                        <p class="card-text">Descubre nuestra agua tónica premium, elaborada con ingredientes seleccionados para ofrecerte una experiencia única. Ideal para quienes buscan un sabor sofisticado y una bebida de calidad superior.</p>
+                        <a href="#" class="btn btn-primary">Ver más detalles</a>
+                    </div>
+                </div>
+                <div class="card m-3" style="width: 40%; min-width: 250px">
+                    <img src="assets/soda.png" alt="foto soda" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Soda</h5>
+                        <p class="card-text">La soda es el complemento perfecto para tus bebidas y comidas. Su versatilidad y frescura la hacen indispensable en cualquier mesa, ya sea para mezclar con jugos, vinos o disfrutar sola bien fría.</p>
+                        <a href="#" class="btn btn-primary">Ver más detalles</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -46,7 +94,7 @@
         </section>
         <section class="opciones">
             <div class="contenedor">
-                <p>AYUDA</p>
+                <p class="subTitulo">AYUDA</p>
                 <hr>
                 <div class="items">
                     <p>Preguntas frecuentes</p>
@@ -56,7 +104,7 @@
                 </div>
             </div>
             <div class="contenedor">
-                <p>SEGUINOS</p>
+                <p class="subTitulo">SEGUINOS</p>
                 <hr>
                 <div class="items">
                     <p>Instagram</p>
@@ -69,5 +117,7 @@
             <p>© 2025 Falsin. Todos los derechos reservados</p>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
 </body>
 </html>
