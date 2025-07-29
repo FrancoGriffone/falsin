@@ -222,10 +222,16 @@ body footer .derechos p {
 }
 
 /* EQUIPO */
-.equipo {
+.equipo img {
+  width: 100%;
+}
+.equipo .historia {
   display: flex;
-  flex-direction: column;
-  margin: 20px 0;
+  align-items: center;
+  margin: 0 15%;
+}
+.equipo .historia img {
+  width: 60%;
 }
 
 /* SERVICIOS */
@@ -255,12 +261,15 @@ body footer .derechos p {
   margin: 20px 0;
 }
 .contacto .formulario input, .contacto .formulario textarea {
-  width: 80%;
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
   border-radius: 6px;
   border: 1px solid #1b1f22;
   font-size: medium;
+}
+.contacto .formulario button {
+  width: 100%;
 }
 .contacto .faqs {
   display: flex;
@@ -275,6 +284,7 @@ body footer .derechos p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 .contacto .faqs .faqItem h3 {
   font-size: x-large;
