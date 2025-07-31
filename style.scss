@@ -256,15 +256,45 @@ body {
 
 /* EQUIPO */
 .equipo {
-    img {
+    .imagenCorte {
+        object-fit: cover;
+        max-height: 40vh;
         width: 100%;
+        display: block;
     }
-    .historia {
+
+    .origenes, .expansion, .cambio, .actualidad {
+        margin: 10% 15%;
+        
+        h1, h2 {
+            font-size: xx-large;
+            margin-bottom: 20px;
+        }
+    }
+
+    .vueltaInicio {
         display: flex;
         align-items: center;
-        margin: 0 15%;
-        img {
-            width: 60%;
+        justify-content: center;
+        p {
+            width: fit-content;
+            margin: 50px;
+            padding: 20px 25px;
+            border: 2px solid $negroClaro;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            &:hover {
+                cursor: pointer;
+                border: 2px solid $celeste;
+                background: $negroClaro;
+                a {
+                    color: $celeste;
+                }
+            }
+            a {
+                color: $negroClaro;
+                text-decoration: none;
+            }
         }
     }
 }

@@ -222,16 +222,43 @@ body footer .derechos p {
 }
 
 /* EQUIPO */
-.equipo img {
+.equipo .imagenCorte {
+  object-fit: cover;
+  max-height: 40vh;
   width: 100%;
+  display: block;
 }
-.equipo .historia {
+.equipo .origenes, .equipo .expansion, .equipo .cambio, .equipo .actualidad {
+  margin: 10% 15%;
+}
+.equipo .origenes h1, .equipo .origenes h2, .equipo .expansion h1, .equipo .expansion h2, .equipo .cambio h1, .equipo .cambio h2, .equipo .actualidad h1, .equipo .actualidad h2 {
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+.equipo .vueltaInicio {
   display: flex;
   align-items: center;
-  margin: 0 15%;
+  justify-content: center;
 }
-.equipo .historia img {
-  width: 60%;
+.equipo .vueltaInicio p {
+  width: fit-content;
+  margin: 50px;
+  padding: 20px 25px;
+  border: 2px solid #1b1f22;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.equipo .vueltaInicio p:hover {
+  cursor: pointer;
+  border: 2px solid #71c5c7;
+  background: #1b1f22;
+}
+.equipo .vueltaInicio p:hover a {
+  color: #71c5c7;
+}
+.equipo .vueltaInicio p a {
+  color: #1b1f22;
+  text-decoration: none;
 }
 
 /* SERVICIOS */
