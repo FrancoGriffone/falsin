@@ -92,10 +92,6 @@ body {
         }
     }
 
-    .productos, .contacto {
-        margin: 0 15%;
-    }
-
     footer {
         padding: 10px 15%;
         text-align: center;
@@ -130,6 +126,48 @@ body {
             justify-content: flex-end;
             p {
                 margin: 1rem 0;
+            }
+        }
+    }
+
+    .empresasAsociadas {
+        margin: 10% 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            text-align: center;
+            font-size: x-large;
+            a {
+                color: $celeste;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .empresas {
+            display: flex;
+            margin: 50px 0;
+            padding: 25px 0;
+            box-shadow: $boxShadow;
+            border-radius: 6px;
+            img {
+                margin: 15px;
+                height: 50px;
+            }
+        }
+
+        // MEDIA QUERYS
+        @media (width < 700px){
+            .empresas {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @media (width >= 700px){
+            .empresas {
+                justify-content: center;
             }
         }
     }
@@ -236,17 +274,25 @@ body {
 
 .productos {
     .titulo {
-        margin-top: 3%;
-        p {
+        margin: 3% 15%;
+        h1 {
             font-size: xx-large;
+        }
+        p {
+            font-size: larger;
         }
     }
     .cardsProductos {
-        padding: 3% 0 5% 0;
+        background: $blancoClaro;
+        padding: 3% 15% 5% 15%;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+        .card {
+            width: 40%;
+            min-width: 250px;
+        }
         /* MEDIA QUERYS */
         @media(width < 925px){
             flex-direction: column;
@@ -326,7 +372,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 20px 0;
+        margin: 50px 15%;
         input, textarea {
             width: 100%;
             padding: 10px;
@@ -350,11 +396,18 @@ body {
         //     }
         // }
     }
+    .mensaje {
+        background: $blancoClaro;
+        padding: 15%;
+        p {
+            font-size: x-large;
+        }
+    }
     .faqs {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 10% 0;
+        margin: 50px 15%;
         .titulo {
             h2 {
                 font-size: xx-large;

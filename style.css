@@ -75,9 +75,6 @@ body header .listaLinks {
   border-radius: 6px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
-body .productos, body .contacto {
-  margin: 0 15%;
-}
 body footer {
   padding: 10px 15%;
   text-align: center;
@@ -112,6 +109,45 @@ body footer .derechos {
 }
 body footer .derechos p {
   margin: 1rem 0;
+}
+body .empresasAsociadas {
+  margin: 10% 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .empresasAsociadas p {
+  text-align: center;
+  font-size: x-large;
+}
+body .empresasAsociadas p a {
+  color: #71c5c7;
+  text-decoration: none;
+}
+body .empresasAsociadas p a:hover {
+  text-decoration: underline;
+}
+body .empresasAsociadas .empresas {
+  display: flex;
+  margin: 50px 0;
+  padding: 25px 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+body .empresasAsociadas .empresas img {
+  margin: 15px;
+  height: 50px;
+}
+@media (width < 700px) {
+  body .empresasAsociadas .empresas {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (width >= 700px) {
+  body .empresasAsociadas .empresas {
+    justify-content: center;
+  }
 }
 @media (width < 550px) {
   body .links {
@@ -202,18 +238,26 @@ body footer .derechos p {
 
 /* PRODUCTOS */
 .productos .titulo {
-  margin-top: 3%;
+  margin: 3% 15%;
 }
-.productos .titulo p {
+.productos .titulo h1 {
   font-size: xx-large;
 }
+.productos .titulo p {
+  font-size: larger;
+}
 .productos .cardsProductos {
-  padding: 3% 0 5% 0;
+  background: #dde2de;
+  padding: 3% 15% 5% 15%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   /* MEDIA QUERYS */
+}
+.productos .cardsProductos .card {
+  width: 40%;
+  min-width: 250px;
 }
 @media (width < 925px) {
   .productos .cardsProductos {
@@ -285,7 +329,7 @@ body footer .derechos p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 0;
+  margin: 50px 15%;
 }
 .contacto .formulario input, .contacto .formulario textarea {
   width: 100%;
@@ -298,11 +342,18 @@ body footer .derechos p {
 .contacto .formulario button {
   width: 100%;
 }
+.contacto .mensaje {
+  background: #dde2de;
+  padding: 15%;
+}
+.contacto .mensaje p {
+  font-size: x-large;
+}
 .contacto .faqs {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10% 0;
+  margin: 50px 15%;
 }
 .contacto .faqs .titulo h2 {
   font-size: xx-large;
