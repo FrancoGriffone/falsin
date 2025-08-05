@@ -179,19 +179,86 @@ body .empresasAsociadas .empresas img {
 }
 
 /* INDEX */
-.cards {
-  margin: 0 15%;
-  padding: 10% 0;
+.index .pantallasGrandes {
+  background-image: url("assets/trabajador.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+}
+.index .pantallasGrandes .palabras {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10%;
+  width: 60%;
+}
+.index .pantallasGrandes .palabras h1 {
+  font-size: xxx-large;
+  color: #dde2de;
+}
+.index .pantallasGrandes .palabras p {
+  font-size: xx-large;
+  color: #dde2de;
+}
+.index .pantallasGrandes .palabras a {
+  max-width: 400px;
+  border: 2px solid #71c5c7;
+  background-color: #71c5c7;
+}
+.index .pantallasGrandes .boton {
+  display: flex;
+  align-items: center;
+  margin: 10%;
+}
+.index .pantallasChicas {
+  flex-direction: column;
+  align-items: center;
+}
+.index .pantallasChicas img {
+  width: 100%;
+}
+.index .pantallasChicas .contenidoChico {
+  padding: 15%;
+  background: #dde2de;
+}
+.index .pantallasChicas .contenidoChico a {
+  width: 100%;
+  border: 2px solid #71c5c7;
+  background-color: #71c5c7;
+}
+@media (width < 925px) {
+  .index .pantallasGrandes {
+    display: none;
+  }
+  .index .pantallasChicas {
+    display: flex;
+  }
+}
+@media (width >= 925px) {
+  .index .pantallasGrandes {
+    display: flex;
+  }
+  .index .pantallasChicas {
+    display: none;
+  }
+}
+.index .infoEmpresa {
+  padding: 10%;
+}
+.index .cards {
+  background: #dde2de;
+  padding: 10%;
   display: flex;
   justify-content: space-around;
   /* MEDIA QUERYS */
 }
 @media (width < 925px) {
-  .cards {
+  .index .cards {
     flex-direction: column;
   }
 }
-.cards .card1, .cards .card2, .cards .card3 {
+.index .cards .card1, .index .cards .card2, .index .cards .card3 {
   min-width: 150px;
   height: 450px;
   background-color: #dde2de;
@@ -206,32 +273,32 @@ body .empresasAsociadas .empresas img {
   text-align: center;
   cursor: pointer;
 }
-.cards .card1 img, .cards .card2 img, .cards .card3 img {
+.index .cards .card1 img, .index .cards .card2 img, .index .cards .card3 img {
   width: 100px;
   height: 100px;
 }
-.cards .card1 h3, .cards .card2 h3, .cards .card3 h3 {
+.index .cards .card1 h3, .index .cards .card2 h3, .index .cards .card3 h3 {
   font-family: "Poppins", sans-serif;
   font-size: larger;
   margin-bottom: 10px;
 }
-.cards .card1 p, .cards .card2 p, .cards .card3 p {
+.index .cards .card1 p, .index .cards .card2 p, .index .cards .card3 p {
   font-size: medium;
 }
-.cards .card1:hover, .cards .card2:hover, .cards .card3:hover {
+.index .cards .card1:hover, .index .cards .card2:hover, .index .cards .card3:hover {
   transform: scale(1.1);
   transition: all 0.5s ease;
   background-color: #71c5c7;
 }
-.cards .card1:hover p, .cards .card1:hover h3, .cards .card2:hover p, .cards .card2:hover h3, .cards .card3:hover p, .cards .card3:hover h3 {
+.index .cards .card1:hover p, .index .cards .card1:hover h3, .index .cards .card2:hover p, .index .cards .card2:hover h3, .index .cards .card3:hover p, .index .cards .card3:hover h3 {
   transition: all 0.3s ease;
   color: #dde2de;
 }
 @media (width > 925px) {
-  .cards .card1, .cards .card2, .cards .card3 {
+  .index .cards .card1, .index .cards .card2, .index .cards .card3 {
     width: 25%;
   }
-  .cards .card2 {
+  .index .cards .card2 {
     margin-top: 100px;
   }
 }
@@ -329,7 +396,7 @@ body .empresasAsociadas .empresas img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 15%;
+  margin: 10% 15%;
 }
 .contacto .formulario input, .contacto .formulario textarea {
   width: 100%;
@@ -353,7 +420,7 @@ body .empresasAsociadas .empresas img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 15%;
+  margin: 10% 15%;
 }
 .contacto .faqs .titulo h2 {
   font-size: xx-large;

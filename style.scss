@@ -214,58 +214,127 @@ body {
 
 /* INDEX */
 
-.cards {
-    margin: 0 15%;
-    padding: 10% 0;
-    display: flex;
-    justify-content: space-around;
-    /* MEDIA QUERYS */
-    @media(width < 925px){
-        flex-direction: column;
+.index {
+    .pantallasGrandes {
+        background-image: url('assets/trabajador.webp');
+        background-size: cover;      // La imagen cubre todo el área
+        background-position: center; // Centra la imagen
+        background-repeat: no-repeat;// Evita que se repita
+        min-height: 80vh;
+        .palabras {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 10%;
+            width: 60%;
+            h1 {
+                font-size: xxx-large;
+                color: $blancoClaro;
+            }
+            p {
+                font-size: xx-large;
+                color: $blancoClaro;
+            }
+            a {
+                max-width: 400px;
+                border: 2px solid $celeste;
+                background-color: $celeste;
+            }
+        }
+        .boton {
+            display: flex;
+            align-items: center;
+            margin: 10%;
+        }
     }
-    .card1, .card2, .card3 {
-        min-width: 150px;
-        height: 450px;
-        background-color: $blancoClaro;
-        border-radius: 6px;
-        padding: 20px;
-        margin: 10px;
-        box-shadow: $boxShadow;
-        display: flex;
+    .pantallasChicas {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        text-align: center;
-        cursor: pointer;
         img {
-            width: 100px;
-            height: 100px;
+            width: 100%;
         }
-        h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: larger;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: medium;
-        }
-        &:hover {
-            transform: scale(1.1);
-            transition: all 0.5s ease;
-            background-color: $celeste;
-            p, h3 {
-                transition: all 0.3s ease;
-                color: $blancoClaro;
+        .contenidoChico {
+            padding: 15%;
+            background: $blancoClaro;
+            a {
+                width: 100%;
+                border: 2px solid $celeste;
+                background-color: $celeste;
             }
         }
     }
-
-    @media(width > 925px){
-        .card1, .card2, .card3 {
-            width: 25%;
+    @media(width < 925px){
+        .pantallasGrandes {
+            display: none;
         }
-        .card2 {
-            margin-top: 100px;
+        .pantallasChicas {
+            display: flex;
+        }
+    }
+    @media(width >= 925px){
+        .pantallasGrandes {
+            display: flex;
+        }
+        .pantallasChicas {
+            display: none;
+        }
+    }
+    .infoEmpresa {
+        padding: 10%;
+    }
+    .cards {
+        background: $blancoClaro;
+        padding: 10%;
+        display: flex;
+        justify-content: space-around;
+        /* MEDIA QUERYS */
+        @media(width < 925px){
+            flex-direction: column;
+        }
+        .card1, .card2, .card3 {
+            min-width: 150px;
+            height: 450px;
+            background-color: $blancoClaro;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: $boxShadow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+            h3 {
+                font-family: 'Poppins', sans-serif;
+                font-size: larger;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: medium;
+            }
+            &:hover {
+                transform: scale(1.1);
+                transition: all 0.5s ease;
+                background-color: $celeste;
+                p, h3 {
+                    transition: all 0.3s ease;
+                    color: $blancoClaro;
+                }
+            }
+        }
+
+        @media(width > 925px){
+            .card1, .card2, .card3 {
+                width: 25%;
+            }
+            .card2 {
+                margin-top: 100px;
+            }
         }
     }
 }
@@ -372,7 +441,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 50px 15%;
+        margin: 10% 15%;
         input, textarea {
             width: 100%;
             padding: 10px;
@@ -407,7 +476,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 50px 15%;
+        margin: 10% 15%;
         .titulo {
             h2 {
                 font-size: xx-large;
