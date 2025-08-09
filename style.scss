@@ -67,6 +67,9 @@ body {
 
         .linksMobile {
             position: relative;
+            .titulo {
+                margin: 0;
+            }
             &:hover {
                 .titulo {
                     cursor: pointer;
@@ -85,7 +88,7 @@ body {
             flex-direction: column;
             align-items: center;
             background: $blanco;
-            top: 50px;
+            top: 30px;
             padding: 10px;
             border-radius: 6px;
             box-shadow: $boxShadow;
@@ -216,7 +219,7 @@ body {
 
 .index {
     .pantallasGrandes {
-        background-image: url('assets/trabajador.webp');
+        background-image: url('assets/imagenPrincipal.jpg');
         background-size: cover;      // La imagen cubre todo el área
         background-position: center; // Centra la imagen
         background-repeat: no-repeat;// Evita que se repita
@@ -225,14 +228,18 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            padding: 10%;
-            width: 60%;
+            padding: 2%;
+            margin: 10%;
+            background: rgb(27, 31, 34, 0.4); // gris semitransparente
+            backdrop-filter: blur(20px);            
+            border-radius: 40px;
+            width: 40%;
             h1 {
                 font-size: xxx-large;
                 color: $blancoClaro;
             }
             p {
-                font-size: xx-large;
+                font-size: x-large;
                 color: $blancoClaro;
             }
             a {
@@ -250,12 +257,22 @@ body {
     .pantallasChicas {
         flex-direction: column;
         align-items: center;
+        position: relative;
+        margin-bottom: 150px;
         img {
             width: 100%;
         }
         .contenidoChico {
-            padding: 15%;
-            background: $blancoClaro;
+            position: absolute;
+            bottom: -150px;
+            margin: 0 15%;
+            padding: 5%;
+            background: rgb(27, 31, 34, 0.4); // gris semitransparente
+            backdrop-filter: blur(20px);            
+            border-radius: 40px;
+            h1, p {
+                color: $blancoClaro;
+            }
             a {
                 width: 100%;
                 border: 2px solid $celeste;
@@ -294,8 +311,8 @@ body {
         .card1, .card2, .card3 {
             min-width: 150px;
             height: 450px;
-            background-color: $blancoClaro;
-            border-radius: 6px;
+            background-color: $blanco;
+            border-radius: 40px;
             padding: 20px;
             margin: 10px;
             box-shadow: $boxShadow;
@@ -308,6 +325,7 @@ body {
             img {
                 width: 100px;
                 height: 100px;
+                margin: 10px 0;
             }
             h3 {
                 font-family: 'Poppins', sans-serif;
@@ -343,7 +361,7 @@ body {
 
 .productos {
     .titulo {
-        margin: 3% 15%;
+        margin: 10% 15% 3% 15%;
         h1 {
             font-size: xx-large;
         }
@@ -353,18 +371,55 @@ body {
     }
     .cardsProductos {
         background: $blancoClaro;
-        padding: 3% 15% 5% 15%;
+        padding: 10%;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
         align-items: center;
-        flex-wrap: wrap;
-        .card {
-            width: 40%;
-            min-width: 250px;
+        .divCard {
+            margin: 3% 0;
+            background: $blanco;
+            box-shadow: $boxShadow;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            img {
+                height: 350px;
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
+            .texto {
+                padding: 0 10%;
+            }
+            @media(width < 1000px){
+                  flex-direction: column;
+                    width: 350px;
+                    img {
+                        border-radius: 6px;
+                    }
+                    .texto {
+                        padding: 10%;
+                        a {
+                            width: 100%;
+                        }
+                    }
+                
+            }
         }
-        /* MEDIA QUERYS */
-        @media(width < 925px){
-            flex-direction: column;
+
+        .otrosProductos {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10%;
+            a {
+                width: 70%;
+                max-width: 500px;
+                min-width: 250px;
+                background: $celeste;
+                border: 2px solid $celeste;
+                color: $blanco;
+            }
         }
     }
 }
@@ -394,21 +449,19 @@ body {
         p {
             width: fit-content;
             margin: 50px;
-            padding: 20px 25px;
-            border: 2px solid $negroClaro;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            &:hover {
-                cursor: pointer;
-                border: 2px solid $celeste;
-                background: $negroClaro;
-                a {
-                    color: $celeste;
-                }
-            }
             a {
                 color: $negroClaro;
                 text-decoration: none;
+                padding: 20px 25px;
+                border: 2px solid $negroClaro;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+                &:hover {
+                    cursor: pointer;
+                    border: 2px solid $negroClaro;
+                    background: $celeste;
+                    color: $blancoClaro;
+                }
             }
         }
     }
@@ -419,17 +472,102 @@ body {
 .servicios {
     display: flex;
     flex-direction: column;
-    .pesaje, .asesoramiento {
-        display: flex;
-        align-items: center;
-        img {
-            border-radius: 50%;
-            max-width: 50%;
+    .introServicios {
+        margin: 10% 15% 3% 15%;
+        h1 {
+            font-size: xx-large;
         }
         p {
-            text-align: center;
             font-size: larger;
-            margin: 10px;
+        }
+    }
+
+    .detalle {
+        display: flex;
+        .pesaje {
+            background-image: url('./assets/pesaje.png');
+            background-size: cover;      // La imagen cubre todo el área
+            background-position: center; // Centra la imagen
+            background-repeat: no-repeat;// Evita que se repita
+        }
+        .asesoramiento {
+            background-image: url('./assets/asesoramiento.png');
+            background-size: cover;      // La imagen cubre todo el área
+            background-position: center; // Centra la imagen
+            background-repeat: no-repeat;// Evita que se repita
+        }
+        .pesaje, .asesoramiento {
+            width: 50%;
+            height: 50vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // background: $blancoClaro;
+            // box-shadow: $boxShadow;
+            p, h3 {
+                background: rgb(27, 31, 34, 0.4); // gris semitransparente
+                backdrop-filter: blur(20px);    
+                border-radius: 6px;
+                padding: 2%;
+                margin: 0;
+                color: $blancoClaro;
+                text-align: center;
+            }
+            p {
+                display: none;
+                height: 100%;
+            }
+            &:hover {
+                cursor: pointer;
+                padding: 0;
+                h3 {
+                    display: none;                    
+                }
+                p {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 0;
+                }
+            }
+        }
+        @media(width < 800px){
+            flex-direction: column;
+            .pesaje, .asesoramiento {
+                width: 100%;
+            }
+        }
+    }
+
+    .opiniones {
+        background: $blancoClaro;
+        padding: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            margin-bottom: 50px;
+            font-size: xx-large;
+        }
+        .opinion {
+            display: flex;
+            align-items: center;
+            p {
+                font-size: x-large;
+            }
+            img {
+                border-radius: 50%;
+                max-width: 250px;
+                width: 50%;
+                margin-right: 20px;
+            }
+            @media(width < 800px){
+                flex-direction: column;
+                img {
+                    margin: 0 0 20px 0;
+                }
+            }
         }
     }
 }

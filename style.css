@@ -56,6 +56,9 @@ body header .links li a:hover, body header .listaLinks li a:hover {
 body header .linksMobile {
   position: relative;
 }
+body header .linksMobile .titulo {
+  margin: 0;
+}
 body header .linksMobile:hover .titulo {
   cursor: pointer;
   text-decoration: underline;
@@ -70,7 +73,7 @@ body header .listaLinks {
   flex-direction: column;
   align-items: center;
   background: #ffffff;
-  top: 50px;
+  top: 30px;
   padding: 10px;
   border-radius: 6px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
@@ -180,7 +183,7 @@ body .empresasAsociadas .empresas img {
 
 /* INDEX */
 .index .pantallasGrandes {
-  background-image: url("assets/trabajador.webp");
+  background-image: url("assets/imagenPrincipal.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -190,15 +193,19 @@ body .empresasAsociadas .empresas img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 10%;
-  width: 60%;
+  padding: 2%;
+  margin: 10%;
+  background: rgba(27, 31, 34, 0.4);
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+  width: 40%;
 }
 .index .pantallasGrandes .palabras h1 {
   font-size: xxx-large;
   color: #dde2de;
 }
 .index .pantallasGrandes .palabras p {
-  font-size: xx-large;
+  font-size: x-large;
   color: #dde2de;
 }
 .index .pantallasGrandes .palabras a {
@@ -214,13 +221,23 @@ body .empresasAsociadas .empresas img {
 .index .pantallasChicas {
   flex-direction: column;
   align-items: center;
+  position: relative;
+  margin-bottom: 150px;
 }
 .index .pantallasChicas img {
   width: 100%;
 }
 .index .pantallasChicas .contenidoChico {
-  padding: 15%;
-  background: #dde2de;
+  position: absolute;
+  bottom: -150px;
+  margin: 0 15%;
+  padding: 5%;
+  background: rgba(27, 31, 34, 0.4);
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+}
+.index .pantallasChicas .contenidoChico h1, .index .pantallasChicas .contenidoChico p {
+  color: #dde2de;
 }
 .index .pantallasChicas .contenidoChico a {
   width: 100%;
@@ -261,8 +278,8 @@ body .empresasAsociadas .empresas img {
 .index .cards .card1, .index .cards .card2, .index .cards .card3 {
   min-width: 150px;
   height: 450px;
-  background-color: #dde2de;
-  border-radius: 6px;
+  background-color: #ffffff;
+  border-radius: 40px;
   padding: 20px;
   margin: 10px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
@@ -276,6 +293,7 @@ body .empresasAsociadas .empresas img {
 .index .cards .card1 img, .index .cards .card2 img, .index .cards .card3 img {
   width: 100px;
   height: 100px;
+  margin: 10px 0;
 }
 .index .cards .card1 h3, .index .cards .card2 h3, .index .cards .card3 h3 {
   font-family: "Poppins", sans-serif;
@@ -305,7 +323,7 @@ body .empresasAsociadas .empresas img {
 
 /* PRODUCTOS */
 .productos .titulo {
-  margin: 3% 15%;
+  margin: 10% 15% 3% 15%;
 }
 .productos .titulo h1 {
   font-size: xx-large;
@@ -315,21 +333,56 @@ body .empresasAsociadas .empresas img {
 }
 .productos .cardsProductos {
   background: #dde2de;
-  padding: 3% 15% 5% 15%;
+  padding: 10%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  /* MEDIA QUERYS */
 }
-.productos .cardsProductos .card {
-  width: 40%;
-  min-width: 250px;
+.productos .cardsProductos .divCard {
+  margin: 3% 0;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-@media (width < 925px) {
-  .productos .cardsProductos {
+.productos .cardsProductos .divCard img {
+  height: 350px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.productos .cardsProductos .divCard .texto {
+  padding: 0 10%;
+}
+@media (width < 1000px) {
+  .productos .cardsProductos .divCard {
     flex-direction: column;
+    width: 350px;
   }
+  .productos .cardsProductos .divCard img {
+    border-radius: 6px;
+  }
+  .productos .cardsProductos .divCard .texto {
+    padding: 10%;
+  }
+  .productos .cardsProductos .divCard .texto a {
+    width: 100%;
+  }
+}
+.productos .cardsProductos .otrosProductos {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10%;
+}
+.productos .cardsProductos .otrosProductos a {
+  width: 70%;
+  max-width: 500px;
+  min-width: 250px;
+  background: #71c5c7;
+  border: 2px solid #71c5c7;
+  color: #ffffff;
 }
 
 /* EQUIPO */
@@ -354,22 +407,20 @@ body .empresasAsociadas .empresas img {
 .equipo .vueltaInicio p {
   width: fit-content;
   margin: 50px;
+}
+.equipo .vueltaInicio p a {
+  color: #1b1f22;
+  text-decoration: none;
   padding: 20px 25px;
   border: 2px solid #1b1f22;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
-.equipo .vueltaInicio p:hover {
+.equipo .vueltaInicio p a:hover {
   cursor: pointer;
-  border: 2px solid #71c5c7;
-  background: #1b1f22;
-}
-.equipo .vueltaInicio p:hover a {
-  color: #71c5c7;
-}
-.equipo .vueltaInicio p a {
-  color: #1b1f22;
-  text-decoration: none;
+  border: 2px solid #1b1f22;
+  background: #71c5c7;
+  color: #dde2de;
 }
 
 /* SERVICIOS */
@@ -377,18 +428,103 @@ body .empresasAsociadas .empresas img {
   display: flex;
   flex-direction: column;
 }
-.servicios .pesaje, .servicios .asesoramiento {
+.servicios .introServicios {
+  margin: 10% 15% 3% 15%;
+}
+.servicios .introServicios h1 {
+  font-size: xx-large;
+}
+.servicios .introServicios p {
+  font-size: larger;
+}
+.servicios .detalle {
+  display: flex;
+}
+.servicios .detalle .pesaje {
+  background-image: url("./assets/pesaje.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.servicios .detalle .asesoramiento {
+  background-image: url("./assets/asesoramiento.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.servicios .detalle .pesaje, .servicios .detalle .asesoramiento {
+  width: 50%;
+  height: 50vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.servicios .detalle .pesaje p, .servicios .detalle .pesaje h3, .servicios .detalle .asesoramiento p, .servicios .detalle .asesoramiento h3 {
+  background: rgba(27, 31, 34, 0.4);
+  backdrop-filter: blur(20px);
+  border-radius: 6px;
+  padding: 2%;
+  margin: 0;
+  color: #dde2de;
+  text-align: center;
+}
+.servicios .detalle .pesaje p, .servicios .detalle .asesoramiento p {
+  display: none;
+  height: 100%;
+}
+.servicios .detalle .pesaje:hover, .servicios .detalle .asesoramiento:hover {
+  cursor: pointer;
+  padding: 0;
+}
+.servicios .detalle .pesaje:hover h3, .servicios .detalle .asesoramiento:hover h3 {
+  display: none;
+}
+.servicios .detalle .pesaje:hover p, .servicios .detalle .asesoramiento:hover p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+}
+@media (width < 800px) {
+  .servicios .detalle {
+    flex-direction: column;
+  }
+  .servicios .detalle .pesaje, .servicios .detalle .asesoramiento {
+    width: 100%;
+  }
+}
+.servicios .opiniones {
+  background: #dde2de;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.servicios .opiniones h2 {
+  margin-bottom: 50px;
+  font-size: xx-large;
+}
+.servicios .opiniones .opinion {
   display: flex;
   align-items: center;
 }
-.servicios .pesaje img, .servicios .asesoramiento img {
-  border-radius: 50%;
-  max-width: 50%;
+.servicios .opiniones .opinion p {
+  font-size: x-large;
 }
-.servicios .pesaje p, .servicios .asesoramiento p {
-  text-align: center;
-  font-size: larger;
-  margin: 10px;
+.servicios .opiniones .opinion img {
+  border-radius: 50%;
+  max-width: 250px;
+  width: 50%;
+  margin-right: 20px;
+}
+@media (width < 800px) {
+  .servicios .opiniones .opinion {
+    flex-direction: column;
+  }
+  .servicios .opiniones .opinion img {
+    margin: 0 0 20px 0;
+  }
 }
 
 /* CONTACTO */
